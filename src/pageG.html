@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variables</title>
+</head>
+<body>
+    <script>
+let thisIsAString ='This is a string';
+let alsoAString ='25';
+let isANumber = 25;
+let isEqual =(alsoAString === isANumber);
+console.log(isEqual);
+let concat= alsoAString + isANumber;
+console.log(concat);
+let addition = isANumber+ isANumber;
+console.log(addition);
+let alsoANumber = 3.05;
+let floatError = 0.06+0.01;
+console.log(floatError);
+let anExponent = 1.23e+3;
+console.log(anExponent);
+let isTrue = true;
+console.log(isTrue);
+let isFalse = false;
+console.log(isFalse);
+let isArray=[0,'one',2,3,'4',5];
+console.log(isArray);
+
+
+
+        //objets
+        let isObject ={
+            'color':'blue',
+            'dog':'bark',
+            'array':[0,1,2,3,4],
+            'myFunc':function () {
+                console.log(' do something!');
+            }
+        }
+            let dog1 = isObject.dog;
+            console.log(dog1);
+            isObject.myFunc();
+
+            let funcA = function() {
+                return "today is a good day";
+            }
+            
+            let funcB = function() {
+                return 100+200;
+            }
+            let resultA = funcA();
+            console.log(resultA);
+            let resultB =funcB();
+            console.log(resultB)
+            
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Run the java script tags at the end and before thr closing "body"
+        else the dom returns a <b>null</b> object
+        becasuse whem the first script is loaded the paragraph element is not yet loaded
+    </div>
+    <!--<script>
+        console.log('before');
+        const p1=document.querySelector('p');
+        console.log(p1);
+    </script> -->
+    <h1>what</h1>
+    <h1>why</h1>
+    <p>this is the second paragraph in pageB</p>
+    <p>Hi there,how are you?</p>
+    <p>how are you?</p>
+    <script>
+        console.log('before');
+        const p1=document.querySelectorAll('h1');
+        console.log(p1);
+    </script>
+    <script>
+        console.log('after');
+        const p=document.querySelector('h1');
+        console.log(p);
+    </script>
+</body>
+</html>

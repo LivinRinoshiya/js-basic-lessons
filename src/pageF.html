@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pageE input</title>
+</head>
+<body>
+    <input placeholder="enter your name here"
+    id='userinput' size=60/>
+    <button onclick='userSubmit()'>Submit </button>
+    <br>
+    <p>
+        <input placeholder="enter your city name here"
+    id='txt2' onkeyup="userSubmitA('txt2')" />
+    </p>
+    <div id='result'></div>
+    <script type='text/javascript'>
+    document.writeln('<p>Hello</p>');
+
+    function userSubmit(){
+        const UI=document.getElementById('userinput').value;
+        document.getElementById('result').innerHTML='you typed: ${UI}';
+    }
+    function userSubmiAt(v1){
+        const UI=document.getElementById(v1).value;
+        document.getElementById('result').innerHTML='you typed: ${UI}';
+    }
+</script>
+<script type="text/javascript">
+    let x=5;
+    // /* the browser will break the js when it thistag
+    // Everyting from tag forward is now being processed as html !
+    // to avoid this you need avoid using this tag anywhere in your java script and 
+    // if you must have it,you should break the strin out like this <'str'+'ing'>*/
+    // document.writeln('</scr'+'ipt>')tag.;
+    document.writeln('<p> value')
+</script>
+</body>
+</html>
