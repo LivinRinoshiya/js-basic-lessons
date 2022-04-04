@@ -1,0 +1,69 @@
+<div class="panel-heading">customer-form works!</div>
+ <form name="customerForm" #customerFormGroup="ngForm" (submit)="saveCustomer()"> 
+<div class="form-group" 
+[class.has-error]="firstNameFormContol.invalid && firstNameForm.touched"> 
+    <label for="fName">
+        First Name:
+    </label>
+    <input class="form-control" placeholder="enter first name" name="fName" 
+    [ngModel]="customerModel.firstName" required minlength="3" 
+    #firstNameFormControl="ngModel"/>
+    <div class="help-block"
+        *ngIf="firstNameFormControl.invalid && firstNameFormControl.touched">
+        <span *ngIf="lastNameFormControl.errors?.['required']">
+            First Name Is Required
+        </span>
+        <span *ngIf="lastNameFormControl.errors?.['minlength']">
+            lastName must be in more than 3 chars
+        </span>
+</div>
+<div class="form-group"> 
+    <label for="lName">
+        Last Name:
+    </label>
+    <input class="form-control" placeholder="enter last name"
+    class="form-control" name="lName" [ngModel]="customerModel.lastName" required minlength="3"
+    #lastNameFormControl="ngModel"/>
+
+    <div class="help-block"
+    *ngIf="lastNameFormControl.invalid && lastNameFormControl.touched">
+    <span *ngIf="lastNameFormControl.errors?.['required']">
+        First Name Is Required
+    </span>
+    <span *ngIf="lastNameFormControl.errors?.['minlength']">
+        lastName must be in more than 3 chars
+    </span>
+</div>
+</div>
+
+<div class="form-group"> 
+    <label for="email">
+        Email:
+    </label>
+    <input class="form-control" placeholder="enter email"
+    class="form-control" name="email" [ngModel]="customerModel.email" #emailFormControl="ngModel"/>
+</div>
+<button class="btn">Submit</button>
+</form> 
+
+<!-- <pre>
+    is pristine : {{customerFormGroup.pristine}}
+    is dirty : {{customerFormGroup.dirty}}
+
+    is valid : {{customerFormGroup.valid}}
+    is invalid : {{customerFormGroup.invalid}}
+
+    is untouched : {{customerFormGroup.untouched}}
+    is touched : {{customerFormGroup.touched}}
+</pre>
+
+<pre class="bg-warning card">
+    is pristine : {{customerFormGroup.pristine}}
+    is dirty : {{customerFormGroup.dirty}}
+
+    is valid : {{customerFormGroup.valid}}
+    is invalid : {{customerFormGroup.invalid}}
+
+    is untouched : {{customerFormGroup.untouched}}
+    is touched : {{customerFormGroup.touched}}
+</pre> -->

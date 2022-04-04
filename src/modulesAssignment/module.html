@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency</title>
+    <link rel="stylesheet" href="themes/modules.css">
+</head>
+
+<body>
+    <form>
+        <table align ="center">
+            <tr>
+                <td><input type="number" value="" id="amount"></td>
+                <td>
+                    <select id="fromcurrency" class="input"></select>
+                </td>
+            </tr>
+            <tr>
+                <td>in</td>
+                <td>
+                    <select id="tocurrency" class="input"></select>
+                </td>
+            </tr>
+            <tr>
+                <td>is</td>
+                <td id="result">$0</td>
+            </tr>
+        </table>
+    </form>
+    <script type="module" src="./script/money.js"></script>
+</body>
+
+</html>

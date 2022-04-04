@@ -4,12 +4,13 @@ module.exports = {
     es2021: true
   },
   extends: [
-    'standard'
+    "standard"
   ],
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module'
+    ecmaVersion: "latest",
+    sourceType: "module"
   },
   rules: {
-  }
-}
+  },
+  'parser': '@babel/eslint-parser'
+};
